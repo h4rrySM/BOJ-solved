@@ -32,9 +32,21 @@ long long gcd(long long a, long long b){
     }
     return t1;
 }
-int miller_rabin(long long n){
+int miller_rabin1(long long n, long long a){
+    long long d = n - 1;
+    if(d % 2 == 0){
+        d /= 2;
+    }
+    for(; d % 2 == 0; d /= 2){
+        if(power(a, d, n) == n - 1){
+            return 1;
+        }
+    }
+    d = power(a, d, n);
+    return d == 1 || d == n - 1;
+}
+int miller_rabin2(long long n){
     long long primes[12] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37};
-    long long d;
     if(n == 1){
         return 0;
     }
@@ -42,17 +54,7 @@ int miller_rabin(long long n){
         if(n == primes[i]){
             return 1;
         }
-        d = n - 1;
-        if(d % 2 == 0){
-            d /= 2;
-        }
-        for(; d % 2 == 0; d /= 2){
-            if(power(primes[i], d, n) == n - 1){
-                return 1;
-            }
-        }
-        d = power(primes[i], d, n);
-        if(d != 1 && d != n - 1){
+        if(!miller_rabin1(n, primes[i])){
             return 0;
         }
     }
@@ -60,7 +62,7 @@ int miller_rabin(long long n){
 }
 long long pollard_rho(long long n){
     long long x1, x2, c, p;
-    if(miller_rabin(n)){
+    if(miller_rabin2(n)){
         return n;
     }
     if(n == 1){
@@ -81,7 +83,7 @@ long long pollard_rho(long long n){
             break;
         }
     }
-    return miller_rabin(p) ? p : pollard_rho(p);
+    return miller_rabin2(p) ? p : pollard_rho(p);
 }
 int main(){
     long long n, p;
