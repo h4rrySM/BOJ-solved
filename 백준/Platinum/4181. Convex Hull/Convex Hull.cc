@@ -6,9 +6,6 @@ vector<pair<int, int>> coord;
 long long ccw(pair<long long, long long> p1, pair<long long, long long> p2, pair<long long, long long> p3){
 	return (p2.first - p1.first) * (p3.second - p1.second) - (p3.first - p1.first) * (p2.second - p1.second);
 }
-double length(pair<long long, long long> p1, pair<long long, long long> p2){
-    return (p1.first - p2.first) * (p1.first - p2.first) + (p1.second - p2.second) * (p1.second - p2.second);
-}
 int compare_a(pair<int, int> p1, pair<int, int> p2){
 	long long a = ccw(coord[0], p1, p2);
 	return a ? a > 0 : p1.second > p2.second;
