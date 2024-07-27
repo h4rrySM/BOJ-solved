@@ -1,0 +1,1 @@
+main(){int h,w;scanf("%d %d",&h,&w);printf("%d",50*(h<w?h:w));}
