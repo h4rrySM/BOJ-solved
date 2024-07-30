@@ -6,7 +6,7 @@
 using namespace std;
 int main(){ IO;
     int n, x, y, index = 0, count1 = 0, count2 = 0, min_x, min_y, start_index = 0, c = 0;
-    vector<pair<int, int>> point, intersect, check;
+    vector<pair<long long, long long>> point, intersect, check;
     cin >> n;
     cin >> x >> y;
     point.push_back({x, y});
