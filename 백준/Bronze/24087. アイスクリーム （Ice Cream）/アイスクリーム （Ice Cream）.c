@@ -1,0 +1,1 @@
+main(s,a,b){scanf("%d%d%d",&s,&a,&b),s-=a,printf("%d0",s-->0?s/b*10+35:25);}
