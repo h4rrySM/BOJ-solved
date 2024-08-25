@@ -25,9 +25,9 @@ int main(){ IO;
     matching.resize(M + 1, -1);
     for(int i = 1; i <= N; i++){
         cin >> work_count;
-        for(int j = 1; j <= work_count; j++){
-            cin >> work_number;
-            work_list[i].push_back(work_number);
+        work_list[i].resize(work_count);
+        for(int &j: work_list[i]){
+            cin >> j;
         }
     }
     for(int i = 1; i <= N; i++){
