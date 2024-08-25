@@ -7,6 +7,7 @@ using namespace std;
 int N, M, work_count, work_number, max_works = 0;
 vector<vector<int>> work_list;
 vector<int> matching, visited;
+
 int bipartite_matching(int worker){
     visited[worker] = 1;
     for(int i: work_list[worker]){
@@ -30,11 +31,9 @@ int main(){ IO;
         }
     }
     for(int i = 1; i <= N; i++){
-        visited.clear();
-        visited.resize(N);
+        fill(visited.begin(), visited.end(), 0);
         max_works += bipartite_matching(i);
-        visited.clear();
-        visited.resize(N);
+        fill(visited.begin(), visited.end(), 0);
         max_works += bipartite_matching(i);
     }
     cout << max_works << '\n';
