@@ -1,0 +1,1 @@
+main(a,b){gets(&a);for(;~scanf("%d%d",&a,&b);)printf("%d\n",a+b/4-b/7);}
