@@ -1,0 +1,1 @@
+main(n){scanf("%d",&n);n*=n+1;printf("%d",n*n/4);}
