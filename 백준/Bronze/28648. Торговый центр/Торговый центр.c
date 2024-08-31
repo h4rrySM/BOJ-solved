@@ -1,0 +1,1 @@
+main(a,b,c){gets(&a);for(c=200;~scanf("%d%d",&a,&b);)a+=b,c=c<a?c:a;printf("%d",c);}
