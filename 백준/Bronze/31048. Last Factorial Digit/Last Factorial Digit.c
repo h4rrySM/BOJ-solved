@@ -1,0 +1,1 @@
+a[10]={1,2,6,4};main(n){gets(&n);for(;~scanf("%d",&n);)printf("%d\n",a[n-1]);}
