@@ -1,0 +1,1 @@
+main(t,m,a){scanf("%d",&t);    for(int k=1;k<=t;k++){m=0;for(int i=0;i<5;i++)scanf("%d",&a),m=m>a?m:a;printf("Case #%d: %d\n",k,m);}}
