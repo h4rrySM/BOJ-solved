@@ -1,0 +1,1 @@
+main(a,b,i){gets(&a);for(;~scanf("%d%d",&a,&b);){for(;b--;){for(i=0;i<a;i++)printf("X");printf("\n");}printf("\n");}}
