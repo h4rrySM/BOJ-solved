@@ -1,0 +1,1 @@
+main(t){scanf("%d",&t);for(;t--;){long long a,b,c,d;scanf("%d%d%d%d",&a,&b,&c,&d);if(a*b==c*d){printf("Tie\n");}else{printf("%s\n",a*b<c*d?"Eurecom":"TelecomParisTech");}}}
