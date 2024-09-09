@@ -1,0 +1,1 @@
+main(a,x,b,y,t){scanf("%d%d%d%d%d",&a,&x,&b,&y,&t);printf("%d %d",a+21*(t-30)*x*(t>30),b+21*(t-45)*y*(t>45));}
