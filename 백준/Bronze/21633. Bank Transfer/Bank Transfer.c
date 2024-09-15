@@ -1,0 +1,1 @@
+main(k){scanf("%d",&k);double d=(k+2500)/100.0;d=d<100?100:d;d=d>2000?2000:d;printf("%.2f",d);}
