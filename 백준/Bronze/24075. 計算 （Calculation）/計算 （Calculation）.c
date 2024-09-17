@@ -1,0 +1,1 @@
+main(a,b,c){scanf("%d%d",&a,&b);c=a+b<a-b?a-b:a+b;b=a+b>a-b?a-b:a+b;printf("%d\n%d",c,b);}
