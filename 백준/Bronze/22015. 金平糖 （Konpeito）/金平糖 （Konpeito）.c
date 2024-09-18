@@ -1,0 +1,1 @@
+main(a,b,c){for(b=0,c=0;~scanf("%d",&a);b+=a,c=c>a?c:a);printf("%d",3*c-b);}
