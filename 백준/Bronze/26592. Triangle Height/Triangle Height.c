@@ -1,0 +1,1 @@
+main(){float a,b;gets(&a);for(;~scanf("%f%f",&a,&b);printf("The height of the triangle is %.2f units\n",2*a/b));}
