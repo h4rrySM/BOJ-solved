@@ -1,0 +1,1 @@
+main(){double a,b;gets(&a);for(;~scanf("%lf%lf",&a,&b);printf("%.1lf\n",fabs(a-b)));}
