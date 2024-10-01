@@ -1,0 +1,1 @@
+main(h,w,i,j,t){t=0;scanf("%d%d",&h,&w);getchar();for(i=h;i--;){for(j=w;j--;)t+=(getchar()-48);getchar();}printf("%d",t<h*w-t?t:h*w-t);}
