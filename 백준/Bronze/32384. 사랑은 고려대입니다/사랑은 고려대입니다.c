@@ -1,0 +1,1 @@
+main(n){char* a="LoveisKoreaUniversity";scanf("%d",&n);for(;n--;printf("%s ",a));}
