@@ -1,0 +1,1 @@
+main(a,b,c,m){scanf("%d%d%d",&a,&b,&c);m=a+b+c;printf("%d",m-b+2*(b<m/3?-a:b+c-m));}
