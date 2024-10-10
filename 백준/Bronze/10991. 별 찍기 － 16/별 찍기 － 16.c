@@ -1,0 +1,1 @@
+main(n,i,j){scanf("%d",&n);for(i=n;i--;){for(j=i;j--;)printf(" ");for(j=n-i;j--;)printf("* ");printf("\n");}}
