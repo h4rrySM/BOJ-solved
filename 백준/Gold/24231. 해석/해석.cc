@@ -11,10 +11,10 @@ int main(){ cin.tie(0)->sync_with_stdio(0);
     for(int i = 0; i < 301; i++){
         dp[i][i - 1] = 1;
     }
-    for(int len = 2; len <= n; len++){
-        for(int i = 0; i + len - 1 < n; i++){
+    for(int len = 2; len <= n; len += 2){
+        for(int i = 0; i + len <= n; i++){
             int j = i + len - 1;
-            for(int k = i + 1; k <= j; k++){
+            for(int k = i + 1; k <= j; k += 2){
                 if(S[i] != S[k]){
                     dp[i][j] = (dp[i][j] + (dp[i + 1][k - 1] * dp[k + 1][j]) % MOD) % MOD;
                 }
