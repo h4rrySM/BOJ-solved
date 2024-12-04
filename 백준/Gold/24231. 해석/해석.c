@@ -1,0 +1,1 @@
+main(n,i,j,k,l){char s[301];long long d[301][301];for(gets(s);s[++n];);for(i=300;i;)d[i--][i]=1;for(l=2;l<=n;l+=2)for(i=1;i+l-1<=n;i++)for(j=i+l-1,k=i;k<j;k+=2)d[i][j]=s[j-1]-s[k-1]?(d[i][j]+d[i][k-1]*d[k+1][j-1])%1000000007:d[i][j];printf("%lld",d[1][n]);}
