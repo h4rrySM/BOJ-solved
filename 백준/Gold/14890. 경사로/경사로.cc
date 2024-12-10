@@ -1,11 +1,9 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-int main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(0);
-    cout.tie(0);
-    
-    int n, l, con, ans = 0, check;
+using ll = long long;
+using pii = pair<int, int>;
+int main(){ cin.tie(0)->sync_with_stdio(0);
+    int n, l, ans = 0;
     cin >> n >> l;
     int paths[100][100];
     for(int i = 0; i < n; i++){
@@ -14,8 +12,7 @@ int main(){
         }
     }
     for(int i = 0; i < n; i++){
-        con = 1;
-        check = 1;
+        int con =  1, check = 1;
         if(n == 1){
             ans++;
             continue;
@@ -57,8 +54,7 @@ int main(){
         }
     }
     for(int i = 0; i < n; i++){
-        con = 1;
-        check = 1;
+        int con =  1, check = 1;
         if(n == 1){
             ans++;
             continue;
@@ -99,6 +95,6 @@ int main(){
             ans++;
         }
     }
-    cout << ans << endl;
+    cout << ans;
     return 0;
 }
