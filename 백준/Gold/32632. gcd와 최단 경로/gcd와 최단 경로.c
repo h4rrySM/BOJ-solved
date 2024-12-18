@@ -1,0 +1,1 @@
+r,i;g(a,b){return b?g(b,a%b):a;}main(n,k){for(scanf("%d%d",&k,&n);n-i;)r+=g(++i,k)<3;printf("%d",k<3?n-1:r);}
